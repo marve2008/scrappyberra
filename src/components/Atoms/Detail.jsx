@@ -52,10 +52,10 @@ const Detail = () => {
             </div>
           </form>
           <div className="flex gap-2 max-md:max-w-[350px]">
-            <Button className="w-[221px] h-[30px] max-md:max-w-fit bg-[#ffffff] flex items-center justify-center border-1 rounded-none text-sm font-medium text-[#000000] hover:bg-[#ffffff]">
+            <Button className="w-[221px] h-[30px] bg-[#ffffff] flex items-center justify-center border-1 rounded-none max-md:max-w-[170px] text-sm font-medium text-[#000000] hover:bg-[#ffffff]">
               PLAN TRIP
             </Button>
-            <Button className="w-[221px] h-[30px] max-md:max-w-fit bg-[#ffffff] flex items-center justify-center border-1 rounded-none  text-sm font-medium text-[#000000] hover:bg-[#ffffff]">
+            <Button className="w-[221px] h-[30px] bg-[#ffffff] flex items-center justify-center border-1 rounded-none max-md:max-w-[170px]  text-sm font-medium text-[#000000] hover:bg-[#ffffff]">
               ORDER BURGER
             </Button>
           </div>
