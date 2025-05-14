@@ -24,7 +24,7 @@ const Detail = () => {
     <div>
       <Card className="min-h-[440px] w-[610px] border-1 rounded-none flex flex-col justify-center items-center max-md:max-w-full">
         <CardHeader>
-          <CardTitle className="text-2xl font-semibold relative right-40 text-nowrap h-[30px]">
+          <CardTitle className="text-2xlmax-md:max-w-[300px] max-md:max-h-[20px] font-semibold relative right-40 text-nowrap h-[30px]">
             COMPUTER USE PLAYGROUND
           </CardTitle>
         </CardHeader>
