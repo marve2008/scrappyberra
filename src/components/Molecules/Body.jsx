@@ -7,7 +7,7 @@ const Body = () => {
   return (
     <div className="flex justify-center flex-col gap-5 pt-3">
       <Stream />
-      <div className="flex px-4 gap-3">
+      <div className="flex px-4 gap-3 max-md:flex-col">
         <Detail />
         <ScrollComponent />
       </div>
