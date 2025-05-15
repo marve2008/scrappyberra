@@ -1,9 +1,30 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
 import pic from "../../app/assets/Images/capy.webp";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null); // Ref for the menu itself
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    // Check if the click is outside the menu and the button
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div className="bg-[#ffffff] px-[15px] h-[45px] flex items-center justify-between border-b-1 font-title">
       <div className="w-[699px] flex gap-16 items-center">

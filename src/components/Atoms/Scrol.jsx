@@ -23,13 +23,13 @@ const Scroll = () => {
 
       {/* Card Section (Target) */}
       <Card className="w-full h-[150px] border-1 rounded-none bg-[#ffffff] p-0 flex flex-col">
-        <div className="w-[full] h-[45px] border-b-1 p-2 flex justify-between items-center">
+        <div className="w-[full] h-[45px] border-b-1 p-2 max-sm:text-[10px] text-nowrap  flex justify-between items-center">
           <p>SYSTEM PROMT</p>
           <div className="w-[225px] h-[30px] flex justify-center items-center gap-2">
             <Button className="h-[30px] w-[138px] border-1 bg-[#ffffff] rounded-none text-[#6d1ccf] text-sm font-medium hover:bg-[#ffffff]">
               RECOMMENDED
             </Button>
-            <Button className="h-[30px] w-[78px] border-1 bg-[#ffffff] rounded-none text-[#000000] text-sm font-medium hover:bg-[#ffffff]">
+            <Button className="h-[30px] w-[78px] border-1 bg-[#ffffff] rounded-none text-[#000000] text-sm font-medium hover:bg-[#ffffff] max-sm:max-w-[50px]">
               COPY
             </Button>
           </div>

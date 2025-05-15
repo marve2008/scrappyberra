@@ -20,7 +20,7 @@ const Stream = () => {
         STREAM
       </a>
       <Select>
-        <SelectTrigger className="w-[202px] h-[37px] border-0 text-sm text-[#000000] rounded-none shadow-none border-0">
+        <SelectTrigger className="w-[202px] max-sm:max-w-[100px] h-[37px] border-0 text-sm text-[#000000] rounded-none shadow-none border-0">
           <SelectValue placeholder="NEW UBUNTU INSTANCE" />
         </SelectTrigger>
         <SelectContent>

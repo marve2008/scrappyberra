@@ -24,12 +24,12 @@ const Detail = () => {
     <div>
       <Card className="min-h-[440px] w-[610px] border-1 rounded-none flex flex-col justify-center items-center max-md:max-w-full">
         <CardHeader>
-          <CardTitle className="text-2xlmax-md:max-w-[300px] max-md:max-h-[20px] font-semibold relative right-40 text-nowrap h-[30px]">
+          <CardTitle className="text-2xl max-sm:text-xl max-sm:ml-5 max-md:max-w-[300px] max-md:max-h-[20px] font-semibold relative right-40 text-nowrap h-[30px]">
             COMPUTER USE PLAYGROUND
           </CardTitle>
         </CardHeader>
         <CardContent className="max-w-[450px] flex flex-col justify-center items-center gap-2">
-          <form className="flex flex-col w-[450px] border-1 max-md:max-w-[350px]">
+          <form className="flex flex-col w-[450px] border-1 max-md:max-w-[350px] max-sm:max-w-[270px]">
             <Textarea
               placeholder="Message Scrapy ..."
               className="border-0 resize-none rounded-none"
@@ -52,14 +52,14 @@ const Detail = () => {
             </div>
           </form>
           <div className="flex gap-2 max-md:max-w-[350px]">
-            <Button className="w-[221px] h-[30px] bg-[#ffffff] flex items-center justify-center border-1 rounded-none max-md:max-w-[170px] text-sm font-medium text-[#000000] hover:bg-[#ffffff]">
+            <Button className="w-[221px] h-[30px] bg-[#ffffff] flex items-center justify-center border-1 rounded-none max-md:max-w-[170px] text-sm font-medium max-sm:max-w-[130px] text-[#000000] hover:bg-[#ffffff]">
               PLAN TRIP
             </Button>
-            <Button className="w-[221px] h-[30px] bg-[#ffffff] flex items-center justify-center border-1 rounded-none max-md:max-w-[170px]  text-sm font-medium text-[#000000] hover:bg-[#ffffff]">
+            <Button className="w-[221px] h-[30px] bg-[#ffffff] flex items-center justify-center border-1 rounded-none max-md:max-w-[170px]  text-sm font-medium max-sm:max-w-[130px] text-[#000000] hover:bg-[#ffffff]">
               ORDER BURGER
             </Button>
           </div>
-          <Button className="w-[450px] h-[30px] max-md:max-w-[350px] border-1 rounded-none bg-[#ffffff] flex justify-center items-center text-[#000000] hover:bg-[#ffffff]">
+          <Button className="w-[450px] h-[30px] max-md:max-w-[350px] border-1 rounded-none bg-[#ffffff] flex max-sm:max-w-[270px] justify-center items-center text-[#000000] hover:bg-[#ffffff]">
             RENT APARTMENT
           </Button>
         </CardContent>
