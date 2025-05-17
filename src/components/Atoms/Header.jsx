@@ -7,27 +7,23 @@ import { Button } from "../ui/button";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null); // Ref for the menu itself
+  const menuRef = useRef(null);
 
-  const togglePopup = (event) => {
-    if (event) {
-      event.stopPropagation(); // Prevent the click event from bubbling up
-    }
-    setIsOpen(!isOpen);
+  const togglePopup = () => {
+    setIsOpen(!isOpen); // Use a functional update to access the latest state
   };
 
-  const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (menuRef.current && !menuRef.current.contains(event.target)) {
+  //       setIsOpen(false);
+  //     }
+  //   };
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
   return (
     <div className="bg-[#ffffff] px-[15px] h-[45px] flex items-center justify-between border-b-1 font-title">
       <div className="w-[699px] flex gap-16 items-center max-md:justify-between">
@@ -65,18 +61,18 @@ const Header = () => {
           </a>
         </nav>
         <Button
-          className=" hidden
+          onClick={togglePopup}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          className=" hidden relative
            max-md:flex
             h-[30px] w-[30px]
              rounded-[7px]
               border-1
                bg-amber-700
-               z-50
+               z-20
                items-center
                justify-center"
-          onClick={togglePopup}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </Button>
@@ -84,16 +80,41 @@ const Header = () => {
       {isOpen && (
         <nav
           ref={menuRef}
-          className="h-[300px] w-full bg-amber-50 border-1 fixed left-0 z-40"
+          className="h-[200px] z-10 w-full fixed bg-amber-50 border-1 left-0 top-0 flex justify-center items-center"
           aria-hidden={!isOpen}
         >
-          <Button
-            onClick={togglePopup}
-            aria-label="Close menu"
-            className="self-end m-4 h-10 w-10"
-          >
-            <FaTimes />
-          </Button>
+          <div className="flex flex-col items-center gap-4">
+            <a
+              href=""
+              className="font-medium text-muted-foreground text-l hover:text-amber-700 transition hover:border-b-2 hover:border-amber-700 duration-200"
+            >
+              PLAYGROUND
+            </a>
+            <a
+              href=""
+              className="font-medium text-muted-foreground text-l hover:text-amber-700 transition hover:border-b-2 hover:border-amber-700 duration-200"
+            >
+              DASHBOARD
+            </a>
+            <a
+              href=""
+              className="font-medium text-muted-foreground text-l hover:text-amber-700 transition  hover:border-b-2 hover:border-amber-700 duration-200"
+            >
+              AUTH
+            </a>
+            <a
+              href=""
+              className="font-medium text-muted-foreground text-l hover:text-amber-700 transition hover:border-b-2 hover:border-amber-700 duration-200"
+            >
+              SETTINGS
+            </a>
+            <a
+              href=""
+              className="font-medium text-muted-foreground text-l hover:text-amber-700 hover:border-b-2 hover:border-amber-700 transition duration-200"
+            >
+              DOCS
+            </a>
+          </div>
         </nav>
       )}
       <div className="flex w-[214px] gap-2 items-center max-md:hidden">
