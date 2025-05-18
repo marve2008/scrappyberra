@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import Image from "next/image";
 
-import pic from "../../app/assets/Images/capy.webp";
+import pic from "../../app/assets/Images/images.png";
 
 import { Button } from "../ui/button";
 
@@ -16,7 +16,7 @@ const Scroll = () => {
       <div className="min-h-[370px] w-full border-1 flex gap-4 justify-center items-center flex-col">
         <Image src={pic} alt="alt" className="h-[150px] w-[150px]" />
         <p className="text-[#98969c] text-[19px]">WELCOME TO SCRAPYBARA</p>
-        <Button className="w-[240px] h-[37px] bg-[#6d1ccf] flex justify-center items-center rounded-none hover:bg-[#6d1ccf]">
+        <Button className="w-[240px] h-[37px] bg-[#000000] flex justify-center items-center rounded-none">
           SIGN UP TO START
         </Button>
       </div>

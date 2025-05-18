@@ -30,7 +30,7 @@ const Stream = () => {
           </SelectGroup>
         </SelectContent>
       </Select>
-      <Button className="h-[30px] w-[85px] bg-[#6D1CCF] hover:bg-[#6d1ccf] rounded-none whitespace-nowrap text-sm font-medium ">
+      <Button className="h-[30px] w-[85px] bg-[#000000] rounded-none whitespace-nowrap text-sm font-medium ">
         START
       </Button>
     </div>
